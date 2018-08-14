@@ -13,3 +13,6 @@
   <p>No Server was created!</p>
 </ng-template>
 <app-server *ngFor="let server of servers"></app-server>
+<button (click)="onCreateServer()">Display Details</button>
+<p>{{ password }}</p>
+<div [ngClass]="{'white-text': i >= 5}" *ngFor="let logItem of log; let i = index" [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'grey'}">{{ logItem }}</div>
